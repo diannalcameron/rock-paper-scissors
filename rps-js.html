@@ -19,6 +19,36 @@
             let random = compChoices[Math.floor(Math.random()*compChoices.length)];
             return random;
         }
+    
+        function playRound() {
+
+            let playerSelection = playerPlay();
+            let computerSelection = computerPlay();
+
+            console.log(playerSelection);
+            console.log(computerSelection);
+
+            if (playerSelection == "scissors" && computerSelection == "Rock") {
+                result = "Rock beats scissors, you lose!";
+            } else if (playerSelection == "scissors" && computerSelection == "Paper") {
+                result = "Scissors beats paper, you win!";
+            } else if (playerSelection == "scissors" && computerSelection == "Scissors") {
+                result = "Tie! Play again!";
+            } else if (playerSelection == "rock" && computerSelection == "Rock") {
+                result = "Tie! Play again!";
+            } else if (playerSelection == "rock" && computerSelection == "Paper") {
+                result = "Paper beats rock, you lose!";
+            } else if (playerSelection == "rock" && computerSelection == "Scissors") {
+                result = "Rock beats scissors, you win!";
+            } else if (playerSelection == "paper" && computerSelection == "Rock") {
+                result = "Paper beats rock, you win!";
+            } else if (playerSelection == "paper" && computerSelection == "Paper") {
+                result = "Tie! Play again!";
+            } else if (playerSelection == "paper" && computerSelection == "Scissors") {
+                result = "Scissors beats paper, you lose!";
+            } return result;
+            
+        }
 
     </script>
 

@@ -9,10 +9,16 @@
     <script>
 
         function playerPlay() {
-        //let playerChoices = ["Rock", "Paper", "Scissors"];
-        let playerSelection = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
-        return playerSelection;
-    }
+            //let playerChoices = ["Rock", "Paper", "Scissors"];
+            let playerSelection = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
+            return playerSelection;
+        }
+
+        function computerPlay () {
+            let compChoices = ["Rock", "Paper", "Scissors"];
+            let random = compChoices[Math.floor(Math.random()*compChoices.length)];
+            return random;
+        }
 
     </script>
 
